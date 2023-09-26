@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5bb6484f-01a4-4516-a30f-3d6aca64a00b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="firstName" class="java.lang.String"/>
+	<parameter name="dob" class="java.lang.String"/>
+	<parameter name="age" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-3" y="0" width="560" height="80" forecolor="#050505" backcolor="#FFBF5E" uuid="4b6c4d5f-5af5-4dcc-9e59-21603579fec4"/>
+				<textField>
+					<reportElement mode="Transparent" x="430" y="0" width="130" height="26" forecolor="#FFFFFF" uuid="3534e32e-7d43-4b7e-b368-54420dca49b3"/>
+					<textElement textAlignment="Center">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Name : "+$P{firstName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="25" width="204" height="30" forecolor="#FFFFFF" uuid="d9bc1c76-a1db-4f55-8d22-21ecbf1a2d8c"/>
+					<box>
+						<pen lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Center" markup="html">
+						<font fontName="Tahoma" size="20" isBold="true"/>
+					</textElement>
+					<text><![CDATA[รายงานการขาย]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="420" y="26" width="130" height="24" forecolor="#FFFFFF" uuid="6b74187d-4942-4702-ac30-b63773df2afe"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["DOB : "+$P{dob}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="420" y="50" width="130" height="30" forecolor="#FFFFFF" uuid="1de7186b-73cd-440a-978c-812594b1b0fc"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["AGE : "+$P{age}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="280" y="0" width="277" height="20" uuid="f0d8d8ad-599e-4591-a39d-310b3f574bc1"/>
+				<staticText>
+					<reportElement x="0" y="0" width="130" height="21" uuid="d6ae732c-32d2-44e9-8fdf-708826570b88"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Report Generated on :]]></text>
+				</staticText>
+				<textField pattern="MMMMM dd, yyyy">
+					<reportElement x="130" y="0" width="160" height="21" uuid="5f5a21a1-14c4-4ab4-bda4-163af3393879"/>
+					<textElement>
+						<font fontName="Tahoma"/>
+					</textElement>
+					<textFieldExpression><![CDATA["วันที่ : "+new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
